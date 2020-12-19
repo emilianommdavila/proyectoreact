@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import "./barraDeBusqueda.css";
 import Logo from "../logo.svg";
 
-function BarraDeBusqueda() {
+function BarraDeBusqueda(props) {
   // Estados
-  const [busqueda, setBusqueda] = useState("");
+  // const [busqueda, setBusqueda] = useState("");
   // Funciones
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.name);
   };
-  const handleChange = (e) => {
-    setBusqueda(e.target.value);
-    console.log(busqueda);
-  };
+  // const handleChange = (e) => {
+  //   setBusqueda(e.target.value);
+  //   console.log(busqueda);
+  // };
   // Retorno
   return (
     <React.Fragment>
@@ -31,9 +31,9 @@ function BarraDeBusqueda() {
               <input
                 name="busqueda"
                 type="text"
-                value={busqueda}
+                value={props.busqueda}
                 placeholder="Busca tu Música"
-                onChange={handleChange}
+                onChange={props.onChange}
               />
             </div>
           </form>

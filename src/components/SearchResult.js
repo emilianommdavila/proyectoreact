@@ -1,10 +1,13 @@
 import "../App.css";
-import React from "react";
+import React, { useState } from "react";
 import ArtistCard from "./artistCard.js";
 import "bootstrap/dist/css/bootstrap.css";
-function SearchResult() {
+function SearchResult(props) {
+  console.log(props.busqueda);
+
   return (
     <React.Fragment>
+      <h1>{props.busqueda}</h1>
       <div className="container">
         <div className="row">
           <ArtistCard
@@ -15,13 +18,6 @@ function SearchResult() {
             img="  https://consequenceofsound.net/wp-content/uploads/2011/09/nirvana300-1.jpg?quality=80"
             titulo="Nirvana"
           />
-
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
         </div>
       </div>
     </React.Fragment>
