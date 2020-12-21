@@ -6,9 +6,7 @@ import SearchResult from "./components/SearchResult";
 
 function PageSearchResult() {
   const [busqueda, setBusqueda] = useState("");
-  useEffect(() => {
-    console.log("el componente se rompio");
-  });
+
   const changeHandle = (e) => {
     setBusqueda(e.target.value);
   };
