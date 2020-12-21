@@ -1,11 +1,14 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BarraDeBusqueda from "./components/barraDeBusqueda.js";
 import "bootstrap/dist/css/bootstrap.css";
 import SearchResult from "./components/SearchResult";
+
 function PageSearchResult() {
   const [busqueda, setBusqueda] = useState("");
-
+  useEffect(() => {
+    console.log("el componente se rompio");
+  });
   const changeHandle = (e) => {
     setBusqueda(e.target.value);
   };

@@ -5,13 +5,31 @@
   height: 180px;
   margin: 10px;
 }
-
+body {
+  color: #666666;
+}
+.centrarLargo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .imagen {
   width: 160px;
   border-radius: 50%;
   border: solid 1px #f4f4f4;
 }
-
+.imagenArtista {
+  width: 400px;
+  border-radius: 50%;
+  border: solid 1px #f4f4f4;
+  margin: auto;
+}
+.top50 {
+  margin-top: 50px;
+}
+.centrarTexto {
+  text-align: center;
+}
 .item:hover {
   box-shadow: 0 2px 6px 0 rgba(32, 33, 36, 0.28);
   border-color: rgba(223, 225, 229, 0);

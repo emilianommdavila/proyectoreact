@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./barraDeBusqueda.css";
 import Logo from "../logo.svg";
+import { Link } from "react-router-dom";
 
 function BarraDeBusqueda(props) {
   // Estados
@@ -19,7 +20,9 @@ function BarraDeBusqueda(props) {
     <React.Fragment>
       <div className="row">
         <div className="col-md-2">
-          <img src={Logo} className="logo-barra" alt="" />
+          <Link to="/">
+            <img src={Logo} className="logo-barra" alt="" />
+          </Link>
         </div>
         <div className="col-md-4">
           <form
