@@ -8,8 +8,8 @@ function PageHome(props) {
     props.history.push("/busqueda?" + artista);
   };
   const onChange = (e) => {
-    setArtista(e.target.value);
     console.log(artista);
+    setArtista(e.target.value);
   };
   return (
     <React.Fragment>
