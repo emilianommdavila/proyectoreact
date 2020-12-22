@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import PageSearchResult from "./pageSearchResult";
 import PageHome from "./pageHome";
 import ArtistPage from "./components/ArtistPage";
-import Post from "./components/prueba";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Layaout from "./components/layaout";
