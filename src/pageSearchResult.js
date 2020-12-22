@@ -8,7 +8,7 @@ function PageSearchResult(props) {
   const [busqueda, setBusqueda] = useState("");
 
   const changeHandle = (e) => {
-    setBusqueda(e.target.value);
+    setBusqueda(e);
   };
   useEffect(() => {
     let search = props.history.location.search.substr(1).replace("%20", " ");

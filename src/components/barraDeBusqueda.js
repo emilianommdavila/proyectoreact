@@ -4,16 +4,20 @@ import Logo from "../logo.svg";
 import { Link } from "react-router-dom";
 
 function BarraDeBusqueda(props) {
-  const [busqueda, setBusqueda] = useState("");
+  const [valorBusqueda, setValorBusqueda] = useState("");
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.target.name);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(valorBusqueda);
+    props.onChange(valorBusqueda);
+  };
   // const handleChange = (e) => {
   //   setBusqueda(e.target.value);
   //   console.log(busqueda);
   // };
+  const cambiarValor = (e) => {
+    setValorBusqueda(e.target.value);
+  };
 
   return (
     <React.Fragment>
@@ -26,7 +30,7 @@ function BarraDeBusqueda(props) {
         <div className="col-md-4">
           <form
             className="form-inline"
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
             name="meLlamoFormulario"
           >
             <div className="busqueda">
@@ -35,12 +39,9 @@ function BarraDeBusqueda(props) {
                 type="text"
                 // value={props.busqueda}
                 placeholder="Busca tu Música"
-                onChange={props.onChange}
+                onChange={cambiarValor}
               />
             </div>
-            <button className="btng" type="submit">
-              Search Similar Artist
-            </button>
           </form>
         </div>
       </div>
