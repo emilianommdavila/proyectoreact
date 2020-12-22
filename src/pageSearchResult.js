@@ -9,13 +9,12 @@ function PageSearchResult(props) {
 
   const changeHandle = (e) => {
     setBusqueda(e.target.value);
-    console.log(busqueda);
   };
   useEffect(() => {
     let search = props.history.location.search.substr(1).replace("%20", " ");
-    console.log(search);
+
     setBusqueda(search);
-  });
+  }, [busqueda]);
   return (
     <React.Fragment>
       <BarraDeBusqueda onChange={changeHandle} busqueda={busqueda} />
