@@ -9,6 +9,7 @@ function PageSearchResult(props) {
 
   const changeHandle = (e) => {
     setBusqueda(e);
+    props.history.push("/busqueda?" + e);
   };
   useEffect(() => {
     let search = props.history.location.search.substr(1).replace("%20", " ");
