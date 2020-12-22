@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./page-home.css";
 import Logo from "./logo.svg";
 function PageHome(props) {
+  const [artista, setArtista] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.name);
+    props.history.push("/busqueda?" + artista);
+  };
+  const onChange = (e) => {
+    setArtista(e.target.value);
+    console.log(artista);
   };
   return (
     <React.Fragment>
@@ -23,11 +28,13 @@ function PageHome(props) {
                   type="text"
                   value={props.busqueda}
                   placeholder="Busca tu Música"
-                  onChange={props.onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="actions">
-                <button className="btng">Search Similar Artist</button>
+                <button className="btng" type="submit">
+                  Search Similar Artist
+                </button>
                 <button className="btng">EscuelaDevRock</button>
               </div>
             </form>
