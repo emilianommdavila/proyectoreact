@@ -54,7 +54,7 @@ function ArtistPage(props) {
     }
     fetchData(
       // ` http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=cher&api_key=d693fd9cd9996bb3a0e22ff64779ae5d&format=json`
-      ` http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${propiedades}&api_key=d693fd9cd9996bb3a0e22ff64779ae5d&format=json`
+      ` https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${propiedades}&api_key=d693fd9cd9996bb3a0e22ff64779ae5d&format=json`
     );
   }, [props]);
   console.log(datos);
