@@ -1,12 +1,11 @@
 import React from "react";
+import "../page-home.css";
 
 function Footer() {
   return (
     <React.Fragment>
-      <div className="row">
-        <div className="col-md-12 centrar">
-          <p>Todos los derechos son Mios</p>
-        </div>
+      <div className="home">
+        <p>Todos los derechos son Mios</p>
       </div>
     </React.Fragment>
   );

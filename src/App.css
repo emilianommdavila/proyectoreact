@@ -9,6 +9,9 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
+.imagenArtista {
+  margin: auto;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

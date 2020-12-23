@@ -9,6 +9,11 @@
   align-content: center;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #logo {
   width: 250px;
   margin: 30px;

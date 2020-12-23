@@ -63,10 +63,12 @@ function SearchResult(props) {
         <div className="row">
           {datos.similarartists.artist.map((artista) => {
             return (
-              <ArtistCard
-                titulo={artista.name}
-                img={artista.image[3]["#text"]}
-              />
+              <div className="col-md-3">
+                <ArtistCard
+                  titulo={artista.name}
+                  img={artista.image[3]["#text"]}
+                />
+              </div>
             );
           })}
         </div>

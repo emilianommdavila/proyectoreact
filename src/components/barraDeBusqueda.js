@@ -21,8 +21,8 @@ function BarraDeBusqueda(props) {
 
   return (
     <React.Fragment>
-      <div className="row">
-        <div className="col-md-2">
+      <div className="barraDeBusqueda">
+        <div className="col-md-2 col-sm-12">
           <Link to="/">
             <img src={Logo} className="logo-barra" alt="" />
           </Link>

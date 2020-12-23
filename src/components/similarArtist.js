@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import ArtistCard from "./artistCard";
 import "bootstrap/dist/css/bootstrap.css";
 
-function SimilarArtist() {
+function SimilarArtist(props) {
+  console.log(props.prop);
   return (
     <React.Fragment>
       <div className="centrarLargo">
@@ -15,7 +16,17 @@ function SimilarArtist() {
 
         <hr />
         <div className="row">
-          <div className="col-md-3">
+          {props.prop.slice(0, 4).map((artista) => {
+            return (
+              <div className="col-md-3">
+                <ArtistCard
+                  titulo={artista.name}
+                  img={artista.image[3]["#text"]}
+                />
+              </div>
+            );
+          })}
+          {/* <div className="col-md-3">
             {" "}
             <ArtistCard
               img="https://placehold.it/350x350"
@@ -42,7 +53,7 @@ function SimilarArtist() {
               img="https://placehold.it/350x350"
               titulo="TestSimilares"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </React.Fragment>
